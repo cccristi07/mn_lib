@@ -1,4 +1,4 @@
-function [Q, R , b] = givens(A,b)
+function [ R, b] = givens(A,b)
 
 
 	% functie care calculeaza factorizarea Q R , folosind rotatii givens si
@@ -9,7 +9,7 @@ function [Q, R , b] = givens(A,b)
 	
 	[m, n] = size(A);
 	
-	Q = eye(m); % matricea ortogonală
+	
 	
 	
 	for k = 1:n
@@ -26,10 +26,6 @@ function [Q, R , b] = givens(A,b)
 			A(i,k:n) = -s*A(k,k:n) + c*A(i,k:n);
 			A(k,k:n) = t;
 
-			% acumulam rotatiile in matrice ortogonala Q
-			t = c*Q(k,:) + s*Q(i,:);
-			Q(i,:) = -s*Q(k,:) + c*Q(i,:);
-			Q(k,:) = t;
 
 			% aplicam rotatia vectorului termenilor liberi b
 
@@ -40,9 +36,8 @@ function [Q, R , b] = givens(A,b)
 		end
 	end
 
-
-	Q = Q';
 	R = A;
+
 
 
 end
