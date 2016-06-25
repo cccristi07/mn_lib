@@ -1,44 +1,34 @@
-function [Q,H] = 	 QRexplicit(A)
+function [Q,H]  = QRexplicit(A, steps)
 
 
 
-	% algoritmul QR cu deplasare simpla explicita
+	% algoritmul QR cu deplasare simpla explicita, Francis
 
 
 
 	% aducem matricea A la forma superior Hessenber
 	[~, H] = HQ(A);
-
-
 	[m, n] = size(A);
-	Q = eye(n);
+	
 
-	% vectorii in care se acumuleaza coeficientii rotatiilor
-	c = zeros(n-1,1);
-	s = zeros(n-1,1);
+	% deoarece H are acelasi spectru ca si A, putem aplica metoda iterativa pt a afla valorile proprii
 
-	u = H(n,n);
-	H = H - u*eye(n);
+	i = 1;
+
+	while i < steps
+
+		u = H(n,n); % rata de deplasare a algoritmului
+		H = H - eye(n)*u;
+
+		[Q, R] = qr(H); % se poate folosi si householderQR sau givensQR
+		H = R*Q + eye(n)*u;
+		i = i + 1;
 
 
-	for j = 1:n-1
-
-		[~, c(j),s(j)] = Gr(H(j:j+1,j)); % construim rotatia Givens care anuleaza elementul j+1 din coloana j
-
-		% aplicam rotatia la stanga
-
-		H(j:end,j:end) = Grs(c(j),s(j),H(j:end,j:end));
 	end
 
-	% aplicam acum toate rotatiile givens la dreapta matricei
+	% H converge catre forma Schur reala a matricii A, unde avem  valori proprii complexe vor aparea blocuri Schur 2x2
 
-	for j = 1:n-1
-
-		H(j:end, j:end) = Grd(H(j:end,j:end),c(j),s(j));
-		Q(j:end, j:end) = Grd(Q(j:end,j:end),c(j),s(j));
-	end
-
-	H = H + u*eye(5);
 
 end
 

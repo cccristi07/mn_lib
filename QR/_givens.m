@@ -1,4 +1,4 @@
-function [ R, b] = givens(A,b)
+function [ R, b] = _givens(A,b)
 
 
 	% functie care calculeaza factorizarea Q R , folosind rotatii givens si
