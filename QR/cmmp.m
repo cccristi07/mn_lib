@@ -10,13 +10,14 @@ function x = cmmp(A,b)
 	% R e R^(m*n)
 	
 	
-	
+	[m,n] = size(A);
+	n = min(m,n);  % ar trebui sa fie nr de coloane, i.e. sistem supradeterminat
 	[Q, R] = givensQR(A);
-	pA = inv( R'*R)*R'*Q';
-	disp(pA);
-	x = pA*b;
-
-	
-	
-	
+	Q = Q';
+	Rh = R(1:n,1:n);
+	Qh = Q(1:n,1:end);
+	b = Qh*b;
+	% rezolvam sistemul Rh*x = Qh*b
+	x = Rh\b;
+ 
 end
