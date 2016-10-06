@@ -1,10 +1,14 @@
 function x = ltris(L,b)
+% functie care rezolva un sistem de ecuatii L*x = b,
 
-       % functie care rezolva un sistem de ecuatii L*x = b,
-       % Matricea L inferior triunghiulara
-       % b vectorul termenilor liberi
-       
-       
+        %       Intrari:  L = Matrice inferior triunghiulara
+        %                 b = vectorul termenilor liberi
+        %
+        %       Iesiri: x = rezultatul rezolvarii sistemului
+
+
+
+
        b = b(:); %ne asiguram ca vectorul b este coloana
        x = b;
        n = length(b);

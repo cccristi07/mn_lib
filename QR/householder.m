@@ -1,7 +1,13 @@
-function [A, b]  = householder(A, b)
+function [R, b]  = householder(A, b)
+% functie care realizeaza triangularizarea ortogonala a sistemului A*x = b
 
 
-	% functie care realizeaza triangularizarea ortogonala a sistemului A*x = b
+%
+%       Intrari: A = matrice 
+%                b = vectorul termenilor liberi
+%
+%       Iesiri:  R = matricea A superior triunghiulara in urma aplicarii transformarii ortogonale Q'*A
+%                b = vectorul termenilor liberi in urma aplicarii transformarii ortogonale Q'*b
 
 
 
@@ -20,5 +26,7 @@ function [A, b]  = householder(A, b)
 
 		b(i:m) = hsY(u, b(i:m), beta);
 	end
+
+	R = A;
 
 end

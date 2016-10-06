@@ -1,7 +1,10 @@
 function LI = linv(L)
+% functie care inverseaza o matrice inferior triunghiulara L
 
-	% functie care inverseaza o matrice inferior triunghiulara L
-
+%       Intrari:  L = matrice inferior triunghiulara L
+%       Iesiri : LI = inversa lui L 
+%
+%
 
 	n = length(L(1,:));
 	

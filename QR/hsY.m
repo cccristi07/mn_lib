@@ -1,8 +1,13 @@
 function y = hsY(u, y, beta)
+% Aplica reflectorul householder u, cu scalarea beta unui vector y
 
-	% Aplica reflectorul householder u, cu scalarea beta unui vector y
-	% y = (I  - u*u'/beta)*y 
-	% y = y - u*u'*y/beta
+%        Intrari:    u = reflector householder
+%                    y = vectorul asupra caruia aplicam transformarea householder
+%                 beta = coeficientul de scalare
+%        
+%
+%        Iesiri:     y = vectorul transformat
+%  
 	
 	
 	m = length(u);

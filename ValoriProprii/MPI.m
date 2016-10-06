@@ -1,9 +1,7 @@
 function [lambda, v] = MPI(A, tol, steps)
-
-
-	% functie care returneaza vectorul atasat valorii proprii dominante + valoarea proprie 
-	% folosind algoritmul puterii inverse, executat cu o toleranta tol si intr-un numar de
-	% pasi - steps
+% functie care returneaza vectorul atasat valorii proprii dominante + valoarea proprie 
+% folosind algoritmul puterii inverse, executat cu o toleranta tol si intr-un numar de
+% pasi - steps
 
 
 	[m, n] = size(A);

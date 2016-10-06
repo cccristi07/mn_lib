@@ -1,10 +1,15 @@
 function [ R, b] = _givens(A,b)
+% functie care calculeaza factorizarea Q R , folosind rotatii givens si
+% aduce sistemul la o forma superior triunghiulara
 
 
-	% functie care calculeaza factorizarea Q R , folosind rotatii givens si
-	% aduce sistemul la o forma superior triunghiulara
-	% R - factor superior triunghiular
-	% b - vectorul termenilor liberi
+
+
+%       Intrari: A = matrice 
+%                b = vectorul termenilor liberi
+%
+%       Iesiri:  R = matricea A superior triunghiulara in urma aplicarii transformarii ortogonale Q'*A
+%                b = vectorul termenilor liberi in urma aplicarii transformarii ortogonale Q'*b
 	
 	
 	[m, n] = size(A);

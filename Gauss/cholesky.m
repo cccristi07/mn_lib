@@ -1,6 +1,12 @@
 function L  = cholesky(A)
 
-	% functia ne da factorizarea Cholesky A = L* L'
+	% functia ne returneaza factorizarea Cholesky A = L* L'
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% L = cholesky(A)
+	% Intrari: matricea A patratica si pozitiv definita
+	% Iesiri: L matrice inferior triunghiulara cu proprietatea ca
+	%  A = L*L'
 
 
 	[m n] = size(A);

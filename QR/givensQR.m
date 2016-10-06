@@ -1,7 +1,14 @@
 function [Q, R] = givensQR(A)
+% functie care calculeaza factorizarea Q R , folosind rotatii givens
 
 
-	% functie care calculeaza factorizarea Q R , folosind rotatii givens
+
+%      Intrari: A = matricea oarecare
+%
+%
+%
+%      Iesiri: Q = factorul ortogonal
+%              R = factorul superior triunghiular
 	
 	
 	

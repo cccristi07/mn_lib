@@ -1,6 +1,14 @@
 function [Q, R]  = householderQR(A)
+% functie care determina factorizarea QR utilizand motoda householder
 
-	% functie care determina factorizarea QR utilizand motoda householder
+
+%      Intrari: A = matricea oarecare
+%
+%
+%
+%      Iesiri: Q = factorul ortogonal
+%              R = factorul superior triunghiular
+
 
 
 	[m n] = size(A);

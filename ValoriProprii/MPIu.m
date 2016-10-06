@@ -1,6 +1,5 @@
 function [lambda, v] = MPIu(A, tol, steps,u)
-
-	% calculeaza vectorul propriu asociat valorii proprii celei mai apropiate de valoarea u
+% calculeaza vectorul propriu asociat valorii proprii celei mai apropiate de valoarea u
 
 
 	[m, n] = size(A);

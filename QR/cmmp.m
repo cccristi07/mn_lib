@@ -1,6 +1,15 @@
 function x = cmmp(A,b)
+% functia rezolva un sistem supradeterminat A*x = b cu m > n
 
-	% functia rezolva un sistem supradeterminat A*x = b cu m > n
+
+
+%      Intrari: A = matrice monica (sistem supradeterminat)
+%               b = vectorul termenilor liberi
+%
+%
+%
+%      Iesiri:  x = solutia problemei celor mai mici patrate
+
 	
 	
 	[m,n] = size(A);

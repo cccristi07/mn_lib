@@ -1,4 +1,4 @@
-
+% rutina de testare a performantei algoritmului de factorizare QR cu reflectori Householder
 timp = zeros(150,1);
 for i = 1:150
 
@@ -7,7 +7,7 @@ for i = 1:150
 	id = tic();
 	householderQR(A);
 	timp(i) = toc(id);
-	fprintf("Pentru matrice de %d x %d timpul este %fs\n",i,i,timp(i));
+	%fprintf("Pentru matrice de %d x %d timpul este %fs\n",i,i,timp(i));
 end
 
 plot(timp);

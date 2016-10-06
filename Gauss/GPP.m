@@ -1,9 +1,8 @@
 function [A, p] = GPP(A)
-
-	% Matricea U superior triunghiulara se memoreaza deasupra diagonalei principale a lui A
-	% multiplicatorii gausieni sunt depozitati in triunghiul inferior a lui A
-	% U = (Mn*Pn) * ... * (M1P1)*A
-	% vectorul p memoreaza permutarile liniilor i < -- > p(i)
+% Matricea U superior triunghiulara se memoreaza deasupra diagonalei principale a lui A
+% multiplicatorii gausieni sunt depozitati in triunghiul inferior a lui A
+% U = (Mn*Pn) * ... * (M1P1)*A
+% vectorul p memoreaza permutarile liniilor i < -- > p(i)
 
 
 

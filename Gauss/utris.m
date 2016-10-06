@@ -1,8 +1,7 @@
 function x = utris(U,b)
-
-      % functie care rezolva sistemul liniar de ecuatii U*x = b
-      % U superior triunghiulara
-      % b vectorul termenilor liberi
+% functie care rezolva sistemul liniar de ecuatii U*x = b
+%      Intrari:  U = matrice superior triunghiulara
+%      Iesiri :  b = vectorul termenilor liberi
       
       b = b(:);
       x = b;
